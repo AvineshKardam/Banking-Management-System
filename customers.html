@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System Website</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+        <link rel="stylesheet" href="customers.css">
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+        <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+</head>
+<header class="header">
+    <a href="#" class="logo">Kardam's Bank</a>
+    <div class="mac" id="home-icon"></div>
+    <nav class="macbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="customers.html" class="active1"> Customers</a>
+    </nav>
+</header>
+
+<div class="verify1">
+    <h>Hi!! Avinesh</h>
+</div>
+
+    <div class="my-info">
+        <h style="color: silver; font-size: 60px;">Hi!! Avinesh</h> 
+
+        <div class="my-circle">
+            <!-- <h4>Net Bank Balance: Rs.<span id="myAccountBalance">5000000</span></h4> -->
+        </div>
+        <br>    
+            <button class="btn btn-info" data-toggle="modal" data-target="#debit">Debit</button>
+            <button class="btn btn-info" data-toggle="modal" data-target="#credit">Credit</button>
+            <button class="btn btn-info" data-toggle="modal" data-target="#sendMoney">Send Money</button>
+            <a class="btn btn-info" href="" data-toggle="modal" data-target="#transactionHistory">See All Transactions</a>
+        </div>
+
+        <!-- Debit section -->
+        <div class="modal fade" id="debit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Debit Money</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="">
+
+                            <div class="input-group mb-3">
+                                <input type="text" id="enterCusName" class="form-control" placeholder="Customer's Roll No."
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2"></span>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                
+                                <input type="text" id="enterAmountDr" class="form-control" placeholder=" Enter Amount"
+                                    aria-label="Amount (to the nearest dollar)">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" onclick="debit()" class="btn btn-success" data-dismiss="modal">Debit
+                            Money</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- credit section -->
+        <div class="modal fade" id="credit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Credit Money</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="">
+
+                            <div class="input-group mb-3">
+                                <input type="number" id="enterCustomerName" class="form-control" placeholder="Customer's Roll No."
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2"></span>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                
+                                <input type="number" id="enterAmountCr" class="form-control" placeholder=" Enter Amount"
+                                    aria-label="Amount (to the nearest dollar)">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" onclick="credit()" class="btn btn-success" data-dismiss="modal">Send
+                            Money</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Money Sending Section-->
+        <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="input-group mb-3">
+                                <input type="number" id="senderRollNo." class="form-control" placeholder="sender's Roll No."
+                                    aria-label="sender's Roll No." aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2"></span>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <input type="number" id="recieverRollNo." class="form-control" placeholder="reciever's Roll No."
+                                    aria-label="reciever's Roll No." aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2"></span>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <input type="number" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                                    aria-label="Enter Amount" aria-describedby="basic-addon2">
+                                <div class="input-group-append"> 
+                                    <span class="input-group-text" id="basic-addon2"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">Send
+                            Money</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Transaction history Section-->
+        <div class="modal fade" id="transactionHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ol id="transaction-history-body">        
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Table Generation Section-->
+        <div class="container">
+            <center>
+                <table class="table-css">
+                    <thead>
+                        <tr class="table-heading">
+                            <th scope="col" style="border-top-left-radius: 25px;">Serial No.</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Roll No.</th>
+                            <th scope="col" style="border-top-right-radius: 25px;">Bank Balance(in Rs.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-light">
+                            <td scope="row">1</td>
+                            <td>Harsh</td>
+                            <td>23229</td>
+                            <td>
+                                <p id="23229BankBalance">45000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row">2</td>
+                            <td>Abhinav</td>
+                            <td>23203</td>
+                            <td>
+                                <p id="23203BankBalance">24000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td scope="row">3</td>
+                            <td>Bhartendu</td>
+                            <td>23127</td>
+                            <td>
+                                <p id="23127BankBalance">34500</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row">4</td>
+                            <td>Aswind</td>
+                            <td>23221</td>
+                            <td>
+                                <p id="23221BankBalance">40000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td scope="row">5</td>
+                            <td>Ayush</td>
+                            <td>23223</td>
+                            <td>
+                                <p id="23223BankBalance">6300</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row">6</td>
+                            <td>Abhishek</td>
+                            <td>23204</td>
+                            <td>
+                                <p id="23204BankBalance">10030</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td>7</td>
+                            <td>Aryan</td>
+                            <td>23219</td>
+                            <td>
+                                <p id="23219BankBalance">5600</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td>8</td>
+                            <td>Saurabh</td>
+                            <td>23255</td>
+                            <td>
+                                <p id="23255BankBalance">5990</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td>9</td>
+                            <td>Vanshika</td>
+                            <td>23277</td>
+                            <td>
+                                <p id="23277BankBalance">-5000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td >10</td>
+                            <td>Aditya</td>
+                            <td>23604</td>
+                            <td >
+                            <p id="23604BankBalance">8000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td scope="row">11</td>
+                            <td>Anuj</td>
+                            <td>23217</td>
+                            <td>
+                                <p id="23217BankBalance">19000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row">12</td>
+                            <td>Anurag</td>
+                            <td>23218</td>
+                            <td>
+                                <p id="23218BankBalance">13000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td scope="row">13</td>
+                            <td>Anshuman</td>
+                            <td>23213</td>
+                            <td>
+                                <p id="23213BankBalance">7000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row">14</td>
+                            <td>Ansh</td>
+                            <td>23211</td>
+                            <td>
+                                <p id="23211BankBalance">9000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td scope="row">15</td>
+                            <td>Devraj</td>
+                            <td>23228</td>
+                            <td>
+                                <p id="23228BankBalance">36000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row">16</td>
+                            <td>Devashish</td>
+                            <td>23226</td>
+                            <td>
+                                <p id="23226BankBalance">4000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td scope="row">17</td>
+                            <td>Devansh</td>
+                            <td>23227</td>
+                            <td>
+                                <p id="23227BankBalance">18000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row">18</td>
+                            <td>Sonu</td>
+                            <td>23269</td>
+                            <td>
+                                <p id="23269BankBalance">24000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td scope="row">19</td>
+                            <td>Abhishek Maurya</td>
+                            <td>23205</td>
+                            <td>
+                                <p id="23205BankBalance">35000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row">20</td>
+                            <td>Abhay</td>
+                            <td>23201</td>
+                            <td>
+                                <p id="23201BankBalance">26000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td scope="row">21</td>
+                            <td>Abhinandan</td>
+                            <td>23202</td>
+                            <td>
+                                <p id="23202BankBalance">38000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row">22</td>
+                            <td>Adarsh</td>
+                            <td>23206</td>
+                            <td>
+                                <p id="23206BankBalance">14000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td scope="row">23</td>
+                            <td>Mayank</td>
+                            <td>23240</td>
+                            <td>
+                                <p id="23240BankBalance">53000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row">24</td>
+                            <td>Anuj Maurya</td>
+                            <td>23216</td>
+                            <td>
+                                <p id="23216BankBalance">27000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-light">
+                            <td>25</td>
+                            <td>Arun</td>
+                            <td>23224</td>
+                            <td>
+                                <p id="23224BankBalance">15000</p>
+                            </td>
+                        </tr>
+                        <tr class="row-dark">
+                            <td scope="row" style="border-bottom-left-radius: 25px;">26</td>
+                            <td>Vishant</td>
+                            <td>23674</td>
+                            <td style="border-bottom-right-radius: 25px;">
+                            <p id="23674BankBalance">8000</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </center>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri;
+}
+
+.logo {
+  position: relative;
+  font-size: 60px;
+  color: bisque;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+}
+
+.logo:hover
+{
+  color: rgb(236, 236, 43) ;
+  text-decoration: none;
+}
+
+.active{
+  position: absolute;
+  right: 170px;
+}
+
+.active1{
+  position: absolute;
+  right: 40px;
+}
+.active:hover
+{
+  color: rgb(236, 236, 43);
+  text-decoration: none;
+}
+
+.active1:hover
+{
+  color: rgb(236, 236, 43);
+  text-decoration: none;
+}
+
+body {
+  background: url(image25.jpg);
+  background-size: 100%;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  align-items: center;
+  z-index: 100;
+  padding: 15px;
+  background: rgb(72, 172, 197);
+  display: flex;
+  justify-content: center;
+}
+
+.modal-title
+{
+  margin-left: 10px;
+}
+
+.macbar a {
+  font-size: 25px;
+  color: bisque;
+  font-weight: 500;
+  margin-left: 3.5rem;
+  transition: 0.4s;
+}
+
+#home-icon {
+  font-size: 4rem;
+  color: yellow;
+  cursor: pointer;
+  display: none;
+}
+
+.verify1 {
+  margin-bottom: 185px;
+  margin-top: 10px;
+  font-size: 0px;
+}
+
+.my-info {
+  margin-top: -75px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-left: 2%;
+}
+
+.my-circle h4 {
+  margin-bottom: 30px;
+  color: rgba(224, 166, 90, 0.814);
+  font-size: 40px;
+}
+
+.btn-info {
+  padding: 1 rem 1.2rem;
+  font-size: 20px;
+  color: rgb(139, 159, 130) !important;
+  margin-left: 5px;
+  padding: 10px;
+  transition: all 0.3s;
+  border: 3px solid;
+  border-color: rgb(165, 126, 159) !important;
+  border-radius: 26px;
+  margin-top: -30px;
+  align-items: center;
+}
+
+.btn-info:hover {
+  color: rgb(238, 219, 14) !important;
+  border-radius: 25px;
+}
+
+.container {
+  padding-bottom: 1%;
+}
+
+th {
+  text-align: center;
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+  padding: 2.5px;
+}
+
+.table-css {
+  width: 70%;
+  border-radius: 35%;
+}
+
+.table-heading {
+  background-color: rgb(48, 106, 154);
+}
+
+.row-dark {
+  background-color: #725151b7;
+  font-size: large;
+}
+
+.row-light {
+  background-color: rgb(118, 147, 196);
+  font-size: large;
+}

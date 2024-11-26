@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri;
+}
+
+.logo {
+  position: relative;
+  font-size: 60px;
+  color:bisque;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+}
+
+.logo:hover{
+    color: rgb(100, 70, 79) ;
+    /* color: rgb(50, 36, 36); */
+    text-decoration: none;
+}
+
+.active
+{
+  position: absolute;
+  right: 170px;
+  font-size: 25px;
+}
+
+.active1{
+  position: absolute;
+  right: 40px;
+  font-size: 35px;
+}
+
+.active:hover
+{
+  color: rgb(236, 236, 43);
+  text-decoration: none;
+}
+
+.active1:hover
+{
+  color: rgb(236, 236, 43);
+  text-decoration: none;
+}
+
+body {
+  background: url(AvineshBank.jpg);
+  background-size: 100%;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  align-items: center;
+  z-index: 100;
+  padding: 15px;
+  background: rgb(60, 111, 158);
+  display: flex;
+  justify-content: center;
+}
+
+.macbar a {
+  font-size: 25px;
+  color: bisque;
+  font-weight: 500;
+  margin-left: 4rem;
+  transition: 0.4s;
+}
+
+#home-icon {
+  font-size: 4rem;
+  color: yellow;
+  cursor: pointer;
+  display: none;
+}
+
+.verify {
+  margin-bottom: 75px;
+  margin-top: 65px;
+  font-weight: 600;
+}
+
+.content {
+  text-align: left;
+  margin-left: 2%;
+  font-size: 20px;
+  color: bisque;
+  /* margin-top: 100px; */
+}
+
+.content > h1 {
+  color: rgb(207, 175, 89);
+  
+}
+
+.content p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  /* color: white; */
+  font-size: 22px;
+  margin-top: 2.8%;
+  margin-bottom: 0%;
+  margin-left: 1%;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 27px;
+  border: 2px solid yellow;
+  padding: 15px 50px;
+  border-radius: 45px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #d7b384;
+}
+
+.social-links {
+  position: absolute;
+  right: 50%;
+  bottom: 10px;
+  margin-top: 40px;
+}
+
+.social-links a {
+  text-decoration: underline;
+  color: rgb(245, 161, 14);
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+
